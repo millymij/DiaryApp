@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- Horizontal guideline to divide the screen -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <!-- Title EditText -->
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:inputType="textCapWords"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical"/>
+
+    <!-- Date EditText -->
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Date"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical"/>
+
+    <!-- Entry Content EditText -->
+    <EditText
+        android:id="@+id/editTextEntryContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="Enter Diary Entry"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:minLines="4"
+        android:maxLines="10"
+        app:layout_constraintTop_toBottomOf="@id/editTextDate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical" />
+
+    <!-- ImageView for Selected Media -->
+    <ImageView
+        android:id="@+id/imageViewSelectedMedia"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMedia"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Add Media Button -->
+    <Button
+        android:id="@+id/buttonMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Media"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSelectedMedia"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintTop_toBottomOf="@id/buttonMedia"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintTop_toBottomOf="@id/buttonBack"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
