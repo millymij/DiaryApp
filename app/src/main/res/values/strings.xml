@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Fragments</string>
+    <string name="tag_page1">Page 1</string>
+    <string name="tag_page2">Page 2</string>
+</resources>
