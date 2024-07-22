@@ -23,3 +23,11 @@ The project is organized into the following key components:
 * Database: DatabaseHelper, DatabaseAdapter
 * Models: DiaryEntry (data class representing a diary entry)
 * ViewModels: MyViewModel (for managing UI state)
+
+### Getting Started
+1) Clone this repository:
+2) Open the project in Android Studio.
+3) Connect a physical device or create an emulator.
+4) Build and run the app.
+
+
